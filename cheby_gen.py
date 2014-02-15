@@ -37,6 +37,20 @@ def gen_matrix(n):
 
     f.close()
 
+def cc(n):
+    f = open("coeffs.dat", 'a')
+    for j in range (0,n):
+        total = 0
+        for k in range (0,n):
+            v = math.sin(math.cos(math.pi*(k+0.5)/n))*math.cos(math.pi*j*(k+0.5)/n)
+            total += v
+
+        cj = total*(2.0/n)
+        f.write(str(cj) + " ")
+
+    f.write('\n')
+    f.close()
+
 if len(sys.argv) < 2:
     print "Not enough arguments supplied"
 else:
@@ -45,3 +59,4 @@ else:
     except:
         print "Bad argument supplied:", sys.argv[1]
     gen_matrix(n)
+    cc(n)
