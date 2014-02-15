@@ -7,6 +7,9 @@ import sys
 # Input: number of chebychev polynomials to be used
 # Output: 
 def gen_matrix(n):
+    if not n > 1:
+        print "Please provide some n > 1"
+        return
 
     a = zeros( (n,n) ) # initialize matrix of zeros
 
