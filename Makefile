@@ -10,6 +10,6 @@ errorTest: sineTest.h errTest.cpp chebSine.h LinearSine.h
 
 all: sineTest
 
-clear:
+clean:
 	rm -f sineTest
 	rm -f errorTest
