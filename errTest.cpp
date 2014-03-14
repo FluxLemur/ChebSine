@@ -1,6 +1,7 @@
 #include "sineTest.h"
 #include "LinearSine.h"
 #include "chebSine.h"
+#include "PadeSine.h"
 
 #include <cmath>
 #include <iostream>
@@ -18,11 +19,14 @@ int main()
     SinePrototype machineSine;
     LinearSine linear(10);
     ChebSine cheb(10);
+    PadeSine pade(10);
+
     
     // NOTE: Only generate one sine at a time!
     //genSineErr(&machineSine, "machine sine");
     //genSineErr(&linear, "linear sine");
     genSineErr(&cheb, "cheb sine");
+    //genSineErr(&pade, "pade sine");
 }
 
 void genSineErr(SinePrototype *yoursine, const char *name) {
