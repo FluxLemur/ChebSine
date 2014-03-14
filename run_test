@@ -1,5 +1,5 @@
 #! /bin/bash
 
-make errTest
+make errorTest
 ./errTest > err.dat
 python errAnalysis.py &
