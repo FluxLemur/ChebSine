@@ -60,9 +60,14 @@ class ChebSine : public SinePrototype
         virtual double sine(double x) {
 	    int greater = 0;
 	    if(x > M_PI){
-		greater = 1;
-   		x -= M_PI;
+		    greater = 1;
+   		    x -= M_PI;
 	    }
+
+        if (x > M_PI/2.0) {
+            x = M_PI - x;
+        }
+
             double curr = 1.0;
             powerX[0] = curr;
             for (int i = 1; i < N ; i++) {
