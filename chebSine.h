@@ -58,6 +58,11 @@ class ChebSine : public SinePrototype
 
         // Overload the function with your function
         virtual double sine(double x) {
+	    int greater = 0;
+	    if(x > M_PI){
+		greater = 1;
+   		x -= M_PI;
+	    }
             double curr = 1.0;
             powerX[0] = curr;
             for (int i = 1; i < N ; i++) {
@@ -78,8 +83,10 @@ class ChebSine : public SinePrototype
                 sum = 0;
                 start = 1 - start;
             }
-
-            return sineX - C[0] / 2.0;
+	    
+	    if (!greater)
+                 return sineX - C[0] / 2.0;
+	    return -(sineX - C[0] / 2.0);
         }
 };
 #endif
