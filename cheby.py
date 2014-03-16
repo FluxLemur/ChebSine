@@ -3,7 +3,7 @@ import math
 import time 
 
 N=10   # Number of chebychev polynomials to use in the approximation. Can change this
-x=1.0    # Place to evaluate the function. This should be an input parameter when calling the program
+x=pi    # Place to evaluate the function. This should be an input parameter when calling the program
 
 # Returns an NxN matrix of chebychev polynomial coefficients - one polynomial per row
 # Input: number of chebychev polynomials to be used
@@ -71,16 +71,10 @@ c = x_vector(N, x)
 # Get the sum
 sum = 0
 for i in range(0, N-1):
-	term = b[i]*(dot(a[i,:],c))
-	sum = sum + term
+    term = b[i]*(dot(a[i,:],c))
+    sum = sum + term
 
 # Print the approximation of sin(x)
-print (sum - b[0]/2.0)
-
-
-
-	
-
-
-
- 
+val = sum - b[0]/2.0
+print "sin(x): %f" % val
+print "error:  %f" %(sin(x) - val)
