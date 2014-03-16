@@ -1,10 +1,12 @@
-Matlab1 - Chebfunsine
-The Octopus - ChebySine2
-ACY - LsqSine2
-AstroPy - RFI
-Mathemagica - LSQ2
-Silver Snakes - PolyInterp
-Matlab 2 - Padesine
-;D - PadeSineD
+GROUP NAME      CODE NAME       STATUS
+==========================================
+Matlab1         Chebfunsine     
+The Octopus     ChebySine2      
+ACY             LsqSine2        Done
+AstroPy         RFI             
+Mathemagica     LSQ2            
+Silver Snakes   PolyInterp      Done
+Matlab 2        Padesine        Done - Ben
+;D              PadeSineD       
 
 Monster Python - ChebSine2
