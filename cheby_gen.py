@@ -38,11 +38,20 @@ def gen_matrix(n):
     f.close()
 
 def cc(n):
+    a = 0
+    b = 2*math.pi
     f = open("coeffs.dat", 'a')
     for j in range (0,n):
         total = 0
         for k in range (0,n):
-            v = math.sin(math.cos(math.pi*(k+0.5)/n))*math.cos(math.pi*j*(k+0.5)/n)
+            #y = (k-.5*(a+b))/(.5*(b-a))
+            fxk = math.cos(math.pi*(k+0.5)/n)
+            fxkj = math.cos(math.pi*j*(k+0.5)/n)
+
+            #fy = (fxk - .5*(b-a))/(.5 * (b+a))
+            #fyj = (fxkj - .5*(b-a))/(.5 * (b+a))
+            
+            v = math.sin(fxk)*fxkj
             total += v
 
         cj = total*(2.0/n)
